@@ -4,7 +4,7 @@ ha = str(sys.argv[1])
 proxmox = str(sys.argv[2])
 password = str(sys.argv[3])
 
-print("homeassitant: "+homeassitant)
+print("homeassitant: "+ha)
 print("proxmox: "+proxmox)
 print("password: "+password)
 
