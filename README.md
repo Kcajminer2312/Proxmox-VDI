@@ -61,4 +61,5 @@ chmod +x ./*.sh
 xterm -fullscreen -e ./select.sh (HomeAssistant IP) (Proxmox IP) (Password)
 cd ..
 sudo rm -frv ./Proxmox-VDI
+donw
 ```
