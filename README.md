@@ -8,7 +8,23 @@ run command ./select.sh as shown below
 
 to use this the Users root and admin must be created and have the same password
 
-You must have the following installed: xserver-xorg x11-xserver-utils xinit openbox virt-viewer
+admin need to be added to sudoers like shown below
+keep the rest of the file just change whats shown
+```bash
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+admin   ALL=(ALL:ALL) NOPASSWD:ALL
+```
+
+for the notification service add
+sudo nano /usr/share/dbus-1/services/org.freedesktop.Notifications.service
+```bash
+[D-BUS Service]
+Name=org.freedesktop.Notifications
+Exec=/usr/lib/notification-daemon/notification-daemon
+```
+
+You must have the following installed: xserver-xorg x11-xserver-utils xinit openbox virt-viewer libnotify-bin
 ```bash
 sudo apt install -y xserver-xorg x11-xserver-utils xinit openbox virt-viewer
 ```
