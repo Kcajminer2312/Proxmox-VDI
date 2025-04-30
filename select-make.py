@@ -11,8 +11,8 @@ print("password: "+password)
 runningproxmox=subprocess.getoutput("cat /etc/apt/sources.list")
 if "download.proxmox.com" in runningproxmox:
     print("Running local")
-    servercommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Choose A Machine To Connect To: IP:"""+proxmox+""" " --menu "" 1920 1080 1080 \ """]
-    clientcommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Choose A Machine To Connect To: IP:"""+proxmox+"""" --menu "" 1920 1080 1080 \ """]
+    servercommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Local: Choose A Machine To Connect To: IP:"""+proxmox+""" " --menu "" 1920 1080 1080 \ """]
+    clientcommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Local: Choose A Machine To Connect To: IP:"""+proxmox+"""" --menu "" 1920 1080 1080 \ """]
     
     print(servercommand)
     
@@ -88,8 +88,8 @@ if "download.proxmox.com" in runningproxmox:
 else:
     print("Running Remote")
 
-    servercommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Choose A Machine To Connect To: IP:"""+proxmox+""" " --menu "" 1920 1080 1080 \ """]
-    clientcommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Choose A Machine To Connect To: IP:"""+proxmox+"""" --menu "" 1920 1080 1080 \ """]
+    servercommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Remote: Choose A Machine To Connect To: IP:"""+proxmox+""" " --menu "" 1920 1080 1080 \ """]
+    clientcommand=["#!/bin/bash","clear","tempfile=$(mktemp)","""dialog --title "Remote: Choose A Machine To Connect To: IP:"""+proxmox+"""" --menu "" 1920 1080 1080 \ """]
     
     print(servercommand)
     
