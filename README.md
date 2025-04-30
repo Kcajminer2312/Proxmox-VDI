@@ -26,7 +26,7 @@ Exec=/usr/lib/notification-daemon/notification-daemon
 
 You must have the following installed: xserver-xorg x11-xserver-utils xinit openbox virt-viewer libnotify-bin
 ```bash
-sudo apt install -y xserver-xorg x11-xserver-utils xinit openbox virt-viewer
+sudo apt install -y xserver-xorg x11-xserver-utils xinit openbox virt-viewer libnotify-bin
 ```
 the ./select.sh script uses the following arguments
 ```bash
