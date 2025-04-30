@@ -37,7 +37,7 @@ if "download.proxmox.com" in runningproxmox:
     for item in machines:
         if item >= 100 and item <= 199:
             print("\nSERVER: "+str(item))
-            name=subprocess.getoutput("cat /etc/pve/local/qemu-server/"+str(item)+".conf")
+            name=subprocess.getoutput("sudo cat /etc/pve/local/qemu-server/"+str(item)+".conf")
             name=name.split("name: ")
             name=name[1]
             name=name.split("\n")
