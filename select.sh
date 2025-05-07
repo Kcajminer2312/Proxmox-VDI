@@ -9,8 +9,8 @@ tempfile=$(mktemp)
 dialog --title "Choose A System Type To Connect To: ARgs: $1 $2 $3" --menu "" 1920 1080 1080 \
 100 "Server" \
 101 "Client" \
-102 "HomeAssiant chromium " \
-103 "ProxMox chromium  " 2> "$tempfile"
+102 "HomeAssiant firefox " \
+103 "ProxMox firefox  " 2> "$tempfile"
 
 # Read the selected number from the temporary file
 selected_number=$(cat "$tempfile")
@@ -25,9 +25,9 @@ if [[ $selected_number == *"100"* ]]; then
 elif [[ $selected_number == *"101"* ]]; then
     ./select-client.sh
 elif [[ $selected_number == *"102"* ]]; then
-    chromium $1:8123/dashboard-pi/0
+    firefox $1:8123/dashboard-pi/0
 elif [[ $selected_number == *"103"* ]]; then
-    chromium $2:8006
+    firefox $2:8006
 else
     exit
 fi
