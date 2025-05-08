@@ -9,7 +9,7 @@ tempfile=$(mktemp)
 dialog --title "Choose A System Type To Connect To: ARgs: $1 $2 $3" --menu "" 1920 1080 1080 \
 100 "Server" \
 101 "Client" \
-102 "HomeAssiant firefox " \
+102 "HomeAssistant firefox " \
 103 "ProxMox firefox  " 2> "$tempfile"
 
 # Read the selected number from the temporary file
